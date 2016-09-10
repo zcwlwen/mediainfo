@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mhor/php-mediainfo": "^2.2"
+    }
+}
