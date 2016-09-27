@@ -13,12 +13,14 @@ use Mhor\MediaInfo\MediaInfo;
 $mediaInfo = new MediaInfo( );
 
 //获得视频信息
+//$mediaInfoContainer = $mediaInfo->getInfo('yanshi.mp4');
 $mediaInfoContainer = $mediaInfo->getInfo('test.mpg');
 //转换成json格式
 $jsonData = json_encode($mediaInfoContainer);
 //对json格式解码
 $jsonDecodeData = json_decode($jsonData);
 
+echo $jsonData;
 //var_dump($jsonDecodeData);
 /**********************************************************************************************************/
 //最外层的解析  主要有用的是$general、$audios、$videos其他的信息这里用不到
@@ -77,7 +79,6 @@ $overall_bit_rate_mode = $general->overall_bit_rate_mode->shortName;
 $overall_bit_rate = $general->overall_bit_rate->shortName;
 //帧率
 $frame_rate = $general->frame_rate->absoluteValue;
-
 
 /*********************************************************/
 //$audios的解析
